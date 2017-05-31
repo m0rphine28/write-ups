@@ -181,9 +181,6 @@ int main(){
 								for(p=0; p<16; p++){
 									//printf("toto\n");
 									x = (charset[i] << 0x1c) + (charset[j] << 0x18) + (charset[k] << 0x14) + (charset[l] << 0x10) + (charset[m] << 0xc) + (charset[n] << 0x8) + (charset[o] << 0x4) + charset[p];
-									//printf("i : %x\n", x);
-									//printf("fu : %x\n", x);
-									//exit(0);
 									res = solve_block3(x);
 									//res = solve_block4(x);
 									if(res == 0x204c4c41) {
