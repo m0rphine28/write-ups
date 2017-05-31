@@ -179,7 +179,6 @@ int main(){
 						for(n=0; n<16; n++){
 							for(o=0; o<16; o++){
 								for(p=0; p<16; p++){
-									//printf("toto\n");
 									x = (charset[i] << 0x1c) + (charset[j] << 0x18) + (charset[k] << 0x14) + (charset[l] << 0x10) + (charset[m] << 0xc) + (charset[n] << 0x8) + (charset[o] << 0x4) + charset[p];
 									res = solve_block3(x);
 									//res = solve_block4(x);
