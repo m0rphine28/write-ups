@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char charset[16] = {'\x00','\x01','\x02','\x03','\x04','\x05','\x06','\x07','\x08','\x09','\x0a','\x0b','\x0c','\x0d','\x0e','\x0f'};
 
 
 unsigned long long mul64(unsigned long long x, unsigned long long y){
@@ -179,7 +178,7 @@ int main(){
 						for(n=0; n<16; n++){
 							for(o=0; o<16; o++){
 								for(p=0; p<16; p++){
-									x = (charset[i] << 0x1c) + (charset[j] << 0x18) + (charset[k] << 0x14) + (charset[l] << 0x10) + (charset[m] << 0xc) + (charset[n] << 0x8) + (charset[o] << 0x4) + charset[p];
+									x = (i << 0x1c) + (j << 0x18) + (k << 0x14) + (l << 0x10) + (m << 0xc) + (n << 0x8) + (o << 0x4) + p;
 									res = solve_block3(x);
 									//res = solve_block4(x);
 									if(res == 0x204c4c41) {
